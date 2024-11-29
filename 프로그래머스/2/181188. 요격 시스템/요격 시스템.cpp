@@ -39,8 +39,6 @@ int solution(vector<vector<int>> targets) {
                 break;
             }
         }
-        
-        
     }
     
     
