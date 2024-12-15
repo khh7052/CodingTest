@@ -9,11 +9,12 @@ int solution(vector<string> maps) {
     int answer = 0;
     int dx[4] = {-1, 1, 0, 0};
     int dy[4] = {0, 0, -1, 1};
-    int visited[105][105];
+    // int visited[105][105];
     queue<pair<int, int>> q;
     
     int height = maps.size();
     int width = maps[0].length();
+    vector<vector<int>> visited(height, vector<int>(width, 0));
     
     for(int y = 0; y < height; y++){
         for(int x = 0; x < width; x++){
@@ -35,7 +36,10 @@ int solution(vector<string> maps) {
         if(maps[y][x] == 'L'){
             onLever = true;
             answer = visited[y][x];
-            memset(visited, 0, sizeof(visited));
+            
+            // visited = (height, vector<int>(width, 0));
+            for (auto& row : visited)
+                fill(row.begin(), row.end(), 0);
             q = queue<pair<int, int>>();
             q.push({x, y});
             break;
