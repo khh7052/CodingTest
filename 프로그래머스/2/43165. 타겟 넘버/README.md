@@ -1,10 +1,10 @@
 # [level 2] 타겟 넘버 - 43165 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/43165?language=cpp) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/43165?language=csharp) 
 
 ### 성능 요약
 
-메모리: 4.02 MB, 시간: 75.67 ms
+메모리: 31.3 MB, 시간: 7.31 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 12월 03일 07:24:57
+2025년 02월 10일 19:18:32
 
 ### 문제 설명
 
