@@ -14,7 +14,7 @@ public class Solution {
                 .Skip(skip)
                 .Take(take)
                 .OrderBy(x => x)
-                .ToArray()[selectIndex];
+                .ElementAt(selectIndex);
         }
         
         return answer;
