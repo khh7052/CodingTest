@@ -1,26 +1,22 @@
 using System;
-using System.Collections.Generic;
 
 public class Solution {
     public int solution(int[] ingredient) {
-        Stack<int> stack = new Stack<int>();
+        int[] stack = new int[ingredient.Length];
+        int ptr = 0; // 스택 포인터
         int count = 0;
 
         foreach (int item in ingredient) {
-            stack.Push(item);
-            
-            if (stack.Count >= 4) {
-                int[] top4 = new int[4];
-                int idx = 3;
-                foreach (int val in stack) {
-                    top4[idx--] = val;
-                    if (idx < 0) break;
-                }
+            stack[ptr++] = item;
 
-                if (top4[0] == 1 && top4[1] == 2 && top4[2] == 3 && top4[3] == 1) {
-                    for (int i = 0; i < 4; i++) stack.Pop();
-                    count++;
-                }
+            if (ptr >= 4 &&
+                stack[ptr - 4] == 1 &&
+                stack[ptr - 3] == 2 &&
+                stack[ptr - 2] == 3 &&
+                stack[ptr - 1] == 1) 
+            {
+                ptr -= 4;
+                count++;
             }
         }
 
